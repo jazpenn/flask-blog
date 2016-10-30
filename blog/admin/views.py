@@ -15,7 +15,7 @@ from .forms import SubmitArticlesForm, ManageArticlesForm, DeleteArticleForm, \
     EditArticleTypeForm, AddArticleTypeNavForm, EditArticleNavTypeForm, SortArticleNavTypeForm, \
     CustomBlogInfoForm, AddBlogPluginForm, ChangePasswordForm, EditUserInfoForm
 from blog.extensions import db
-
+import os
 
 @admin.route('/')
 @login_required
@@ -33,18 +33,22 @@ def submitArticles():
     types = [(t.id, t.name) for t in ArticleType.query.all()]
     form.types.choices = types
 
+
     if form.validate_on_submit():
         title = form.title.data
         source_id = form.source.data
         content = form.content.data
         type_id = form.types.data
         summary = form.summary.data
+        file = request.files['file']
+        file.save(os.path.join('./blog/static/images/thumbnails', file.filename))
+        thumbnail = file.filename
 
         source = Source.query.get(source_id)
         articleType = ArticleType.query.get(type_id)
 
         if source and articleType:
-            article = Article(title=title, content=content, summary=summary,
+            article = Article(title=title, thumbnail=thumbnail, content=content, summary=summary,
                               source=source, articleType=articleType)
             db.session.add(article)
             db.session.commit()

@@ -21,12 +21,15 @@
 <div class="entry-box submit-article">
     <h4><strong>发表文章</strong></h4>
     <hr/>
-    <form class="submit-article" method="post" action="">
+    <form class="submit-article" method="post" action="" enctype="multipart/form-data">
         {{ form.csrf_token }}
         <div class="form-group">
             {{ form.title.label(class='control-label') }}：
             {{ form.source(class='', required='') }}
             {{ form.title(class='submit-article-title', required='') }}（1-50字）
+        </div>
+        <div class="form-group">
+            <input type = "file" name = file>
         </div>
         <div class="form-group">
             {{ form.content() }}

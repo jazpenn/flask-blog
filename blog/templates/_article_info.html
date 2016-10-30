@@ -3,6 +3,11 @@
         <a href="{{ url_for('.articleDetails', id=article.id) }}">{{ article.title }}</a>
     </h3>
 </div>
+{% if article.thumbnail %}
+    <div class="article-entry-thumb" style="background-image: url({{ url_for('static', filename='images/thumbnails/'+article.thumbnail) }})">
+
+    </div>
+{% endif %}
 <div class="article-entry-info">
     <div class="base-info">
         <span class="label label-default">{{ moment(article.create_time.date()).format('LL') }}</span>&nbsp;
