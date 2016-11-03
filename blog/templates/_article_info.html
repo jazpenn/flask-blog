@@ -4,8 +4,10 @@
     </h3>
 </div>
 {% if article.thumbnail %}
-    <div class="article-entry-thumb" style="background-image: url({{ url_for('static', filename='images/thumbnails/'+article.thumbnail) }})">
+    <div class="article-image" >
+        <div class="article-entry-thumb" style="background-image: url({{ url_for('static', filename='images/thumbnails/'+article.thumbnail) }})">
 
+        </div>
     </div>
 {% endif %}
 <div class="article-entry-info">
