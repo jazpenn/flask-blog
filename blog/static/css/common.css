@@ -325,19 +325,15 @@ ul.comments .disabled-comment-admin-btn {
     line-height: normal;
 }
 .swiper-wrapper{
-    position: relative;
+    text-align: center;
 }
 .article-button{
     position: absolute;
     height: 38px;
     line-height: 38px;
     text-decoration: none;
-    border-style:solid;
-    border-width:3px;
+    border: 3px solid white;
     border-radius: 5px;
-    border-color: white;
-    left: 50%;
-    top: 50%;
     display: none;
     background: transparent;
     color: white;
