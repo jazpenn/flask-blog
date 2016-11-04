@@ -328,7 +328,6 @@ ul.comments .disabled-comment-admin-btn {
     text-align: center;
 }
 .article-button{
-    position: absolute;
     height: 38px;
     line-height: 38px;
     text-decoration: none;
