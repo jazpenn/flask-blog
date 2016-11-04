@@ -13,6 +13,7 @@
     {% block stylesheet %}
         <link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet">
         <link href="{{ url_for('static', filename='css/common.css') }}" rel="stylesheet">
+        <link href="{{ url_for('static', filename='css/swiper.min.css') }}" rel="stylesheet">
     {% endblock %}
 </head>
 <body>
@@ -92,6 +93,7 @@
 {% block Content %}
     <div class="content">
         <div class="container">
+            {% include "includes/glide.html" %}
             <div class="row">
                 <div class="col-md-8 article">
                     {% for category, message in get_flashed_messages(with_categories=true) %}
