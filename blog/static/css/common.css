@@ -328,10 +328,11 @@ ul.comments .disabled-comment-admin-btn {
     text-align: center;
 }
 .article-button{
-    height: 38px;
-    line-height: 38px;
+    padding: 0 15px;
+    height: 48px;
+    line-height: 40px;
     text-decoration: none;
-    border: 3px solid white;
+    border: 3px solid #357ebd;
     border-radius: 5px;
     display: none;
     background: transparent;
