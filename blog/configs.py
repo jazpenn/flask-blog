@@ -23,7 +23,7 @@ class Config:
 
 
 class DevelopmentConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'postgresql://flask:flask@127.0.0.1/flask_dev'
+    SQLALCHEMY_DATABASE_URI = 'postgresql://jazpenn:zxli201314@127.0.0.1/flask_blog'
 
 
 class DefaultConfig(DevelopmentConfig):
