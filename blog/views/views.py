@@ -12,6 +12,11 @@ from blog.extensions import db
 
 @blog.route('/')
 def index():
+    return render_template('miao/index.html')
+
+
+@blog.route('/blog')
+def blog_index():
     BlogView.add_view(db)
     page = request.args.get('page', 1, type=int)
     pagination = Article.query.order_by(Article.create_time.desc()).paginate(
