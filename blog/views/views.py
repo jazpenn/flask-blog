@@ -15,6 +15,11 @@ def index():
     return render_template('miao/index.html')
 
 
+@blog.route('/miao')
+def miao():
+    return render_template('miao/miao.html')
+
+
 @blog.route('/blog')
 def blog_index():
     BlogView.add_view(db)
