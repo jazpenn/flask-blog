@@ -20,6 +20,11 @@ def miao():
     return render_template('miao/miao.html')
 
 
+@blog.route('/fire')
+def fire():
+    return render_template('miao/fire.html')
+
+
 @blog.route('/blog')
 def blog_index():
     BlogView.add_view(db)
