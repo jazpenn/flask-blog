@@ -20,6 +20,7 @@
         }
         a {
             color: #ebf7f4;
+            text-decoration:none
         }
         .body--ready {
             background: -webkit-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
@@ -81,6 +82,36 @@
             width: 100%;
             font-weight: bold;
         }
+        .waves{
+    position:relative;
+    cursor:pointer;
+    display:inline-block;
+    overflow:hidden;
+    text-align: center;
+    -webkit-tap-highlight-color:transparent;
+    z-index:1;
+}
+.waves .waves-animation{
+    position:absolute;
+    border-radius:50%;
+    width:25px;
+    height:25px;
+    opacity:0;
+    background:rgba(255,255,255,0.3);
+    transition:all 0.7s ease-out;
+    transition-property:transform, opacity, -webkit-transform;
+    -webkit-transform:scale(0);
+    transform:scale(0);
+    pointer-events:none
+}
+.ts-btn{
+    width: 200px;
+    height: 56px;
+    line-height: 56px;
+    background: #f57035;
+    color: #fff;
+    border-radius: 5px;
+}
     </style>
 
 </head>
@@ -97,7 +128,8 @@
 <p class="text" style="color: #ed3073;">
     We fell in love
     <br/>
-    <span id="span_dt_dt"></span>
+    <span id="span_dt_dt"></span><br/>
+    <span><a class="waves ts-btn" href="fire.html">嘿嘿嘿</a></span>
 </p>
 <script language="javascript">
     function show_date_time() {
@@ -125,7 +157,7 @@
             S.Drawing.init('.canvas');
             document.body.classList.add('body--ready');
             //想说的话
-            S.UI.simulate("喵喵|I'm|白白|Nice|to|Meet|You|#countdown 3|#time");
+            S.UI.simulate("喵喵|我是|你的|白白|遇见|你|真|好|#countdown 3|#time");
             S.Drawing.loop(function () {
                 S.Shape.render();
             });

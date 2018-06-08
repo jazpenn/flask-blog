@@ -19,6 +19,7 @@
 	color: #666666
 }
 -->
+  a{text-decoration:none}
 </style>
 </head>
 <body>
@@ -30,19 +31,19 @@
   <div id="wrap">
     <div id="text">
       <div id="code"> <font color="#FF0000"> <span class="say">亲爱的喵喵，我爱你，遇见你是我最美的奇遇</span><br>
-        <span class="say"> </span><br>
-        <span class="say"> 初心</span><br>
-        <span class="say"> 。。。</span><br>
+        <span class="say">此生愿与你</span><br>
+        <span class="say">春有百花，秋有月</span><br>
+        <span class="say">夏有凉风，冬有雪</span><br>
+        <span class="say">余生全是你</span><br>
         <span class="say">换我心，为你心，始知相忆深。</span><br>
-        <span class="say">emmm</span><br>
-        <span class="say">emmmm</span><br>
-        <span class="say">emmmm</span><br>
-        <span class="say"> </span><br>
-        <span class="say"><span class="space"></span> -- 爱你的白白--</span> </font>
+        <span class="say">朝为念，暮成思，方知情之诚</span><br>
+        <span class="say">千言万语，难述我心间所爱</span><br>
+        <span class="say">愿与你情深到白头，永不分离</span><br>
+        <span class="say"><span class="space"></span> -- 爱你的白白 --</span> </font>
         </p>
           <div>
             <p style="color: hotpink; font-size: 40px;">你喜欢白白嘛？</p>
-              <button style="color: red" id="like" onclick="like()"><a href="{{ url_for('blog.miao')}}">喜欢</a></button>   <button style="color: #666666">不喜欢</button>
+              <button style="color: red" id="like" onclick="like()"><a href="{{ url_for('blog.miao')}}">喜欢</a></button>   <button style="color: #666666" onclick="nolike()">不喜欢</button>
           </div>
       </div>
     </div>
@@ -54,7 +55,8 @@
   </div>
 </div>
 <script>
-    </script>
+        
+</script>
 <script>
     /*
         嘿嘿，我猜你会看源码~
@@ -229,4 +231,9 @@
 </div>
 
 </body>
+<script>
+    function nolike() {
+        alert("你再想想嘛，你看你家白白多可爱，emmmm多帅");
+    }
+</script>
 </html>
