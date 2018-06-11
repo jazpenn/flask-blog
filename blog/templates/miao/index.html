@@ -23,7 +23,7 @@
 </style>
 </head>
 <body>
-<audio autoplay="autopaly">
+<audio autoplay="autoplay" loop="loop">
   <source src="../../static/music/2.mp3" type="audio/mp3" />
 </audio>
 <div id="main">
@@ -39,10 +39,11 @@
         <span class="say">朝为念，暮成思，方知情之诚</span><br>
         <span class="say">千言万语，难述我心间所爱</span><br>
         <span class="say">愿与你情深到白头，永不分离</span><br>
+        <span class="say"></span><br>
         <span class="say"><span class="space"></span> -- 爱你的白白 --</span> </font>
         </p>
           <div>
-            <p style="color: hotpink; font-size: 40px;">你喜欢白白嘛？</p>
+            <p style="color: hotpink; font-size: 40px;">你喜欢你的白白嘛？</p>
               <button style="color: red" id="like" onclick="like()"><a href="{{ url_for('blog.miao')}}">喜欢</a></button>   <button style="color: #666666" onclick="nolike()">不喜欢</button>
           </div>
       </div>

@@ -70,7 +70,7 @@
         }
         .text {
             position: fixed;
-            bottom: 80px;
+            bottom: 5px;
             text-align: center;
             width: 100%;
             font-weight: bold;
@@ -126,7 +126,9 @@
 </div>
 <canvas class="canvas" width="1820" height="905"></canvas>
 <p class="text" style="color: #ed3073;">
-    We fell in love
+    还记得第一次你来找我吗<br>
+    我想把这天定位我们的交往纪念日<br/>
+    到今天刚好
     <br/>
     <span id="span_dt_dt"></span><br/>
     <span><a class="waves ts-btn" href="{{ url_for('blog.fire')}}">嘿嘿嘿</a></span>
@@ -157,7 +159,7 @@
             S.Drawing.init('.canvas');
             document.body.classList.add('body--ready');
             //想说的话
-            S.UI.simulate("喵喵|我是|你的|白白|遇见|你|真|好|#countdown 3|#time");
+            S.UI.simulate("喵喵|我是|你的|白白|遇见|你|真|好|#countdown 3|今天|能跟我|约会吗|#countdown 3|#time");
             S.Drawing.loop(function () {
                 S.Shape.render();
             });
