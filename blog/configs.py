@@ -27,7 +27,7 @@ class DevelopmentConfig(Config):
 
 
 class DefaultConfig(DevelopmentConfig):
-    DEBUG = True
+    DEBUG = False
 
 
 config = {
