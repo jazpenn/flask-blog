@@ -10,8 +10,20 @@ from .forms import CommentForm
 from blog.extensions import db
 
 
-@blog.route('/')
+@blog.route('/', methods=['GET', 'POST'])
 def index():
+    # return render_template('miao/index.html')
+    if request.method == "POST":
+        post_data = request.form.to_dict()
+        if post_data.get("userName") != "周筱玲" and post_data.get("pwd") != "19931012":
+            flash("错啦，自己生日都不记得了嘛！！！")
+        return render_template('20191012/happy.html')
+
+    return render_template('20191012/login.html')   # 20191012
+
+
+@blog.route('/miaoindex')
+def miaoindex():
     return render_template('miao/index.html')
 
 
@@ -23,6 +35,11 @@ def miao():
 @blog.route('/fire')
 def fire():
     return render_template('miao/fire.html')
+
+
+@blog.route('/fireworks')
+def fireworks():
+    return render_template('20191012/fireworks.html')
 
 
 @blog.route('/blog')
